@@ -1,22 +1,22 @@
-<div class="container"
-    fxLayout="row"
-    fxLayout.sm="column"
-    fxLayout.xs="column"
-    fxLayoutAlign.gt-md="space-around center"
-    fxLayoutGap="10px" 
-    fxLayoutGap.xs="0">
-
+<div
+  class="container"
+  fxLayout="row"
+  fxLayout.sm="column"
+  fxLayout.xs="column"
+  fxLayoutAlign.gt-md="space-around center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+>
   <div fxFlex="40" *ngIf="dish">
     <mat-card>
       <mat-card-header>
         <mat-card-title>
-          <h3>{{dish.name | uppercase}}</h3>
+          <h3>{{ dish.name | uppercase }}</h3>
         </mat-card-title>
       </mat-card-header>
-      <img mat-card-image src={{dish.image}} alt={{dish.name}}>
+      <img mat-card-image src="{{ dish.image }}" alt="{{ dish.name }}" />
       <mat-card-content>
-        <p>{{dish.description}}
-        </p>
+        <p>{{ dish.description }}</p>
       </mat-card-content>
       <mat-card-actions>
         <button mat-button>LIKE</button>
@@ -26,16 +26,13 @@
   </div>
 
   <div fxFlex="40">
-	  <h2><b>Comments</b></h2>
-	  <div *ngFor="let data of dish.comments">
-		  
-			  <mat-list-item>{{data.comment}}</mat-list-item>   
-		  	  <mat-list-item>{{data.rating}} Stars</mat-list-item>
-		      <mat-list-item>-- {{data.author}} {{data.date | date}}</mat-list-item>
-		  
-		  <br><br>
-	  </div>
-  	
-  </div>
+    <h2><b>Comments</b></h2>
+    <div *ngFor="let data of dish.comments">
+      <mat-list-item>{{ data.comment }}</mat-list-item>
+      <mat-list-item>{{ data.rating }} Stars</mat-list-item>
+      <mat-list-item>-- {{ data.author }} {{ data.date | date }}</mat-list-item>
 
+      <br /><br />
+    </div>
+  </div>
 </div>

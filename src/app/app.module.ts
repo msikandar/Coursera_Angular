@@ -15,25 +15,19 @@ import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    DishdetailComponent
-  ],
+  declarations: [AppComponent, MenuComponent, DishdetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-	FlexLayoutModule,
-	MatToolbarModule,
-	MatListModule,
-	MatGridListModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatListModule,
+    MatGridListModule,
     MatCardModule,
     MatButtonModule,
-	  
-    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
